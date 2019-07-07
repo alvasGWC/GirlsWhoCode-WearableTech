@@ -9,7 +9,6 @@
 
 int led = 5;  
 int led2 = 6;
-int led3 = 9;
 int button = A5;
 int buttonState;
 
@@ -18,7 +17,6 @@ void setup() {
   //LEDs
   pinMode(led, OUTPUT);
   pinMode(led2, OUTPUT);
-  pinMode(led3, OUTPUT);
 
   //push button
   pinMode(button, INPUT_PULLUP);
@@ -39,12 +37,6 @@ void loop() {
     digitalWrite(led, HIGH);
     digitalWrite(led2, HIGH);
     digitalWrite(led, HIGH);
-    digitalWrite(led2, HIGH);
-    digitalWrite(led3, HIGH);
-    digitalWrite(led2, HIGH);
-    digitalWrite(led, HIGH);
-    digitalWrite(led2, HIGH);
-    digitalWrite(led, HIGH);
     
     Serial.println("Morning, LEDs");
   }
@@ -53,7 +45,6 @@ void loop() {
     // if not pressed, turn off LED
     digitalWrite(led, LOW);
     digitalWrite(led2, LOW);
-    digitalWrite(led3, LOW);
     
     Serial.println("Goodnight, LEDs");
   }
